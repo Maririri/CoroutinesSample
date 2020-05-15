@@ -57,7 +57,7 @@ const char *resumable::recent_val() { return handle_.promise().string_; }
 resumable foo() {
     while (true) {
         co_yield "Hello";
-//        co_yeild "Coroutine"; // why this doesn't compile?
+        co_yield "Coroutine";
     }
 }
 
