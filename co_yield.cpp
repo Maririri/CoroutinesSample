@@ -53,9 +53,11 @@ struct resumable::promise_type {
 
 const char *resumable::recent_val() { return handle_.promise().string_; }
 
+const char* foo(const char* param){}
 
 resumable foo() {
     while (true) {
+        co_yield foo("abc");
         co_yield "Hello";
         co_yield "Coroutine";
     }
