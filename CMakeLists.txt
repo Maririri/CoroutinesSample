@@ -7,5 +7,5 @@ if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "MSVC")
     add_definitions(/await)
 endif ()
 
-add_executable(co_return co_return.cpp randomsource.cpp)
+add_executable(co_return co_return.cpp)
 add_executable(co_yield co_yield.cpp)
